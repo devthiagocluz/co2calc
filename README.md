@@ -2,6 +2,10 @@
 
 Aplicação web que estima a distância em linha reta entre duas cidades, calcula as emissões de CO₂ de uma viagem e mostra o custo estimado para compensá-las.
 
+## Demonstração
+
+Acesse a [calculadora publicada no GitHub Pages](https://devthiagocluz.github.io/co2calc/).
+
 ## Funcionalidades
 
 - Sugestões de cidades da configuração e entrada de nomes livres.
