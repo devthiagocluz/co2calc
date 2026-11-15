@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de emissões de CO₂ para viagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de emissões de CO₂ para viagens</h1>
+    <p>Digite ou selecione a origem e o destino para estimar as emissões da sua viagem. A distância é calculada em linha reta.</p>
+
+    <form id="travel-form">
+      <div>
+        <label for="origin">Cidade de origem</label>
+        <input type="text" id="origin" name="origin" list="cities-list" placeholder="Digite ou selecione uma cidade" autocomplete="off" required>
+      </div>
+
+      <div>
+        <label for="destination">Cidade de destino</label>
+        <input type="text" id="destination" name="destination" list="cities-list" placeholder="Digite ou selecione uma cidade" autocomplete="off" required>
+      </div>
+
+      <datalist id="cities-list"></datalist>
+
+      <div>
+        <label for="transport">Meio de transporte</label>
+        <select id="transport" name="transport" required></select>
+      </div>
+
+      <button id="calculate-btn" type="submit">Calcular emissões</button>
+    </form>
+
+    <section id="result" aria-live="polite" aria-label="Resultado do cálculo"></section>
+    <p class="attribution">
+      Geocodificação por
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>.
+    </p>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
